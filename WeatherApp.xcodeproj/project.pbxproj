@@ -70,13 +70,13 @@
 				7572A17524019DE100B499B2 /* SceneDelegate.swift */,
 				7572A17724019DE100B499B2 /* ViewController.swift */,
 				7572A18B2402EC2B00B499B2 /* APIManager.swift */,
+				7572A19024057A1700B499B2 /* APIWeatherManager.swift */,
 				7572A18D2402EFFF00B499B2 /* ErrorManager.swift */,
 				7572A18F2402F00E00B499B2 /* WeatherModel */,
 				7572A17924019DE100B499B2 /* Main.storyboard */,
 				7572A17C24019DE800B499B2 /* Assets.xcassets */,
 				7572A17E24019DE800B499B2 /* LaunchScreen.storyboard */,
 				7572A18124019DE800B499B2 /* Info.plist */,
-				7572A19024057A1700B499B2 /* APIWeatherManager.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
