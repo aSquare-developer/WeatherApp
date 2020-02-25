@@ -17,6 +17,7 @@
 		7572A18A2401A69700B499B2 /* WeatherIconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572A1892401A69700B499B2 /* WeatherIconManager.swift */; };
 		7572A18C2402EC2C00B499B2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572A18B2402EC2B00B499B2 /* APIManager.swift */; };
 		7572A18E2402EFFF00B499B2 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572A18D2402EFFF00B499B2 /* ErrorManager.swift */; };
+		7572A19124057A1700B499B2 /* APIWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572A19024057A1700B499B2 /* APIWeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7572A1892401A69700B499B2 /* WeatherIconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIconManager.swift; sourceTree = "<group>"; };
 		7572A18B2402EC2B00B499B2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		7572A18D2402EFFF00B499B2 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
+		7572A19024057A1700B499B2 /* APIWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWeatherManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				7572A17C24019DE800B499B2 /* Assets.xcassets */,
 				7572A17E24019DE800B499B2 /* LaunchScreen.storyboard */,
 				7572A18124019DE800B499B2 /* Info.plist */,
+				7572A19024057A1700B499B2 /* APIWeatherManager.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				7572A18A2401A69700B499B2 /* WeatherIconManager.swift in Sources */,
 				7572A1882401A60000B499B2 /* CurrentWeather.swift in Sources */,
 				7572A17624019DE100B499B2 /* SceneDelegate.swift in Sources */,
+				7572A19124057A1700B499B2 /* APIWeatherManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

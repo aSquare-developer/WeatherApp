@@ -22,9 +22,7 @@ protocol APIManager {
     var session: URLSession { get }
     
     func JSONTaskWith(request: URLRequest, completionHandler: @escaping JSONCompletionHandler)  -> JSONTask
-    func fetch<T>(request: URLRequest, parse: ([String: AnyObject]) -> T?, completionHandler: @escaping (APIResult<T>) -> Void)
-    
-    init(sessionConfiguration: URLSessionConfiguration)
+    func fetch<T>(request: URLRequest, parse: @escaping ([String: AnyObject]) -> T?, completionHandler: @escaping (APIResult<T>) -> Void)
 }
 
 
