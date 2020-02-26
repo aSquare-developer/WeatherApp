@@ -41,13 +41,16 @@
                                         <rect key="frame" x="0.0" y="216" width="375" height="42.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="740 mm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyV-gb-VyX">
-                                                <rect key="frame" x="0.0" y="0.0" width="106" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="16.5" height="42.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="L1O-Qr-zrZ">
+                                                <rect key="frame" x="179.5" y="0.0" width="16" height="42.5"/>
+                                            </activityIndicatorView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfc-p4-iiX">
-                                                <rect key="frame" x="269" y="0.0" width="106" height="42.5"/>
+                                                <rect key="frame" x="358.5" y="0.0" width="16.5" height="42.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -110,6 +113,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="L1O-Qr-zrZ" id="axU-7E-5kX"/>
                         <outlet property="appearentTemperatureLabel" destination="MEE-2J-h4e" id="Wzb-au-GNf"/>
                         <outlet property="humidityLabel" destination="Lfc-p4-iiX" id="jJx-5n-xiX"/>
                         <outlet property="imageView" destination="LAv-xf-9tM" id="G9Q-cO-Cgj"/>

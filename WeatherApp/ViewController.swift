@@ -17,28 +17,48 @@ class ViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var appearentTemperatureLabel: UILabel!
     @IBOutlet weak var refreshButton: UIButton!
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    lazy var weatherManager = APIWeatherManager(apiKey: "13c86f30ecdbf0c7761f3df994ccdc52")
-    let coordinates = Coordinates(latitude: 58.366049, longitude: 26.7915514)
+    lazy var weatherManager = APIWeatherManager(apiKey: "4c9f70a74459b9b4b5ae145c4d99b575")
+    let coordinates = Coordinates(latitude: 58.366529, longitude: 26.790602)
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        getCurrentWeatherData()
+    }
+    
+    func toggleActivityIndicator(on: Bool) {
+        refreshButton.isHidden = on
+        
+        if on {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+    }
+    
+    func getCurrentWeatherData() {
+        
+        self.toggleActivityIndicator(on: false)
+        
         weatherManager.fetchCurrentWeatherWith(coordinates: coordinates) { (result) in
             switch result {
             case .Success(let currentWeather):
                 self.updateUIWith(currentWeather: currentWeather)
             case .Failure(let error as NSError):
-                
-                let alertController = UIAlertController(title: "Unable to get data", message: "\(error.localizedDescription)", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertController.addAction(okAction)
-                
-                self.present(alertController, animated: true, completion: nil)
-                
+                self.alertController(title: "Unable to get data", message: "\(error.localizedDescription)")
             }
         }
+    }
+    
+    func alertController(title: String, message: String) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+        
     }
     
     func updateUIWith(currentWeather: CurrentWeather) {
@@ -52,6 +72,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func refreshButtonTapped(_ sender: UIButton) {
+        toggleActivityIndicator(on: true)
+        getCurrentWeatherData()
     }
     
 }

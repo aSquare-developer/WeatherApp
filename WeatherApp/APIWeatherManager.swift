@@ -17,7 +17,7 @@ enum ForecastType: FinalURLPoint{
     case Current(apiKey: String, coordinates: Coordinates)
     
     var baseURL: URL {
-        return URL(string: "http://api.forecast.io")!
+        return URL(string: "https://api.darksky.net")!
     }
     
     var path: String {
